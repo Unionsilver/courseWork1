@@ -31,8 +31,9 @@ public class Main {
         employee[9] = employee10;
         allInfo();
         spendSalary();
-        minSalary();
         fullName();
+        minSalary();
+        maxSalary();
 
 
         System.out.println("___________________Билет № 5 задача___________________");
@@ -58,22 +59,29 @@ public class Main {
             num += employee[i].getSalary();
             month = num / monthDays;
         }
-        System.out.println("Сумма завтрат в месяц - " + num);
+        System.out.println("Сумма затрат в месяц - " + num);
         System.out.println("средняя значение зарплаты в месяц " + month);
     }
 
     public static void minSalary() {
-        double min = Integer.MAX_VALUE;
-        double max = Integer.MIN_VALUE;
-        for (int i = 0; i < employee.length; i++) {
-            if (employee[i].getSalary() < min) {
-                min = employee[i].getSalary();
-            } else if (employee[i].getSalary() > max) {
-                max = employee[i].getSalary();
+        Employee min = employee[0];
+
+        for (int j = 0; j < employee.length; j++) {
+            if (employee[j].getSalary() < min.getSalary()) {
+                min = employee[j];
             }
         }
-        System.out.println("Сотрудник с минимальной зарплатой " + min);
-        System.out.println("Сотрудник с максимальной зарплатой " + max);
+        System.out.println(min.getFullName() + " минимальная зарплата сотрудника " + min.getSalary());
+    }
+
+    public static void maxSalary() {
+        Employee max = employee[0];
+        for (int j = 0; j < employee.length; j++) {
+            if (employee[j].getSalary() > max.getSalary()) {
+                max = employee[j];
+            }
+        }
+        System.out.println(max.getFullName() + " максимальная зарплата сотрудника " + max.getSalary());
     }
 
     public static void fullName() {
@@ -83,22 +91,17 @@ public class Main {
     }
 
 
-
-
-
-
-
     public static void getArray() {
-        int[] arr =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         for (int i = 0; i < arr.length; i++) {
             System.out.print(i + " ");
         }
-        System.out.println("Первое задание");
+        System.out.println("Первое задание!");
 
     }
 
     public static void evenNumbers() {
-        int[] arr =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int num = 1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
@@ -106,16 +109,16 @@ public class Main {
             }
             System.out.print(arr[i] + " ");
         }
-        System.out.println("Второе задание");
+        System.out.println("Второе задание!");
 
     }
 
     public static void returnAList() {
-        int[] arr =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         for (int j = 2; j < 6; j++) {
             System.out.print(j + " ");
         }
-        System.out.println("Третье задание");
+        System.out.println("Третье задание!");
 
     }
 }

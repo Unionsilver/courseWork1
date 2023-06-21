@@ -93,7 +93,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(i + " ");
         }
-        System.out.println("Первое задание");
+        System.out.println("Первое задание!");
 
     }
 
@@ -106,7 +106,7 @@ public class Main {
             }
             System.out.print(arr[i] + " ");
         }
-        System.out.println("Второе задание");
+        System.out.println("Второе задание!");
 
     }
 
@@ -115,7 +115,7 @@ public class Main {
         for (int j = 2; j < 6; j++) {
             System.out.print(j + " ");
         }
-        System.out.println("Третье задание");
+        System.out.println("Третье задание!");
 
     }
 }
